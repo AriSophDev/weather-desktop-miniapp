@@ -1,0 +1,9 @@
+.titlebar {
+  position: absolute;
+  width: 513px;
+  height: 42px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffafd4;
+}

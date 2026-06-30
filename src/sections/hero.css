@@ -1,0 +1,96 @@
+.hero {
+  position: absolute;
+  width: 513px;
+  height: 114px;
+  left: 0px;
+  top: 42px;
+  background: #fee7f1;
+}
+
+.heart {
+  position: absolute;
+  width: 40px;
+  height: 33px;
+  left: 33px;
+  top: 40px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.texto {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+
+  position: absolute;
+  width: 109px;
+  height: 30px;
+  left: 100px;
+  top: 45px;
+}
+
+.button-box {
+  position: absolute;
+  width: 230px;
+  height: 66px;
+  left: 270px;
+  top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  background: #ffe2e7;
+  border: 2px solid #ed8bb4;
+  border-radius: 9px;
+}
+
+.button-f {
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  gap: 1px;
+  width: 64px;
+  height: 27px;
+  background: #f97db9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 1000px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.button-c {
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  padding-left: 4px;
+  gap: 1px;
+  width: 64px;
+  height: 27px;
+  background: #f97db9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  border-radius: 1000px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: #f4f5f2;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
