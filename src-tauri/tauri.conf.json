@@ -15,7 +15,8 @@
         "title": "weather",
         "width": 513,
         "height": 390,
-        "resizable": false
+        "resizable": false,
+        "decorations": false
       }
     ],
     "security": {
