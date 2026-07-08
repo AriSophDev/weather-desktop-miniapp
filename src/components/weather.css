@@ -1,0 +1,276 @@
+.weather-box {
+  position: absolute;
+  width: 513px;
+  height: 248px;
+  left: 0;
+  top: 156px;
+  overflow: hidden;
+  transition: background 1.5s ease;
+  border-radius: 0;
+}
+
+/* ===== TIME OF DAY BACKGROUNDS ===== */
+
+/* Morning - warm orange/pink */
+.weather-box.morning {
+  background: linear-gradient(180deg, #ff9a56 0%, #ffcd7b 40%, #ffe4a8 100%);
+}
+
+/* Afternoon - bright blue sky */
+.weather-box.afternoon {
+  background: linear-gradient(180deg, #4facfe 0%, #74c0fc 40%, #a8d8ff 100%);
+}
+
+/* Evening - sunset purple/orange */
+.weather-box.evening {
+  background: linear-gradient(180deg, #667eea 0%, #e8746b 50%, #f9a86b 100%);
+}
+
+/* Night - dark indigo */
+.weather-box.night {
+  background: linear-gradient(180deg, #0c1445 0%, #1a1a5e 40%, #2d2b6b 100%);
+}
+
+/* ===== WEATHER OVERLAY TINTS ===== */
+
+.weather-overlay {
+  position: absolute;
+  inset: 0;
+  transition: background 1s ease;
+  pointer-events: none;
+}
+
+/* Sunny - subtle warm glow */
+.weather-box.sunny .weather-overlay {
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(255, 220, 100, 0.3) 0%,
+    transparent 60%
+  );
+}
+
+/* Cloudy - gray dimming */
+.weather-box.cloudy .weather-overlay {
+  background: rgba(120, 130, 150, 0.35);
+}
+
+/* Rainy - dark blue-gray */
+.weather-box.rainy .weather-overlay {
+  background: rgba(40, 50, 70, 0.45);
+}
+
+/* Night overlay for all weather */
+.weather-box.night .weather-overlay {
+  background: rgba(10, 10, 40, 0.25);
+}
+
+.weather-box.night.rainy .weather-overlay {
+  background: rgba(10, 10, 40, 0.5);
+}
+
+/* ===== SUN ===== */
+
+.sun-container {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.sun {
+  font-size: 64px;
+  filter: drop-shadow(0 0 20px rgba(255, 200, 50, 0.8));
+}
+
+.sun-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 220, 80, 0.4) 0%,
+    rgba(255, 220, 80, 0.1) 50%,
+    transparent 70%
+  );
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.weather-box.night .sun-container {
+  display: none;
+}
+
+/* ===== CLOUDS ===== */
+
+.clouds-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.8;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.cloud-1 {
+  top: 25px;
+  left: 30px;
+  font-size: 55px;
+  animation: drift 12s linear infinite;
+}
+
+.cloud-2 {
+  top: 60px;
+  left: 180px;
+  font-size: 42px;
+  animation: drift 15s linear infinite;
+  animation-delay: -4s;
+  opacity: 0.6;
+}
+
+.cloud-3 {
+  top: 15px;
+  left: 340px;
+  font-size: 48px;
+  animation: drift 10s linear infinite;
+  animation-delay: -8s;
+  opacity: 0.7;
+}
+
+.weather-box.night .cloud {
+  opacity: 0.3;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* ===== RAIN ===== */
+
+.rain-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(174, 210, 255, 0.9) 0%,
+    rgba(130, 180, 255, 0.4) 100%
+  );
+  border-radius: 0 0 4px 4px;
+  animation: fall linear infinite;
+}
+
+/* ===== WEATHER CONTENT ===== */
+
+.weather-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.weather-icon {
+  font-size: 40px;
+  margin-bottom: 4px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.weather-temp {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.weather-temp:hover {
+  transform: scale(1.05);
+}
+
+.weather-condition {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 2px;
+}
+
+.weather-hint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Night text adjustments */
+.weather-box.night .weather-temp {
+  color: #e8e8ff;
+  text-shadow: 0 0 20px rgba(150, 150, 255, 0.4);
+}
+
+.weather-box.night .weather-condition {
+  color: rgba(200, 200, 255, 0.8);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(280px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.6;
+  }
+}

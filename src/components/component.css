@@ -1,63 +1,47 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-}
-
-.app-container {
-  border-radius: 14px;
-  overflow: hidden;
-  border: 2px solid #4fc3f7;
-  /* borde celeste */
-  height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
 .titlebar {
-  height: 40px;
-  background: #f8a8c8;
-  /* rosa */
+  position: absolute;
+  width: 513px;
+  height: 42px;
+  left: 0px;
+  top: 0px;
+  background: #ffafd4;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.titlebar-title {
+  font-size: 13px;
+  color: #666;
+  user-select: none;
 }
 
 .titlebar-controls {
   display: flex;
-  gap: 14px;
+  gap: 8px;
+  align-items: center;
 }
 
-.dot {
-  width: 18px;
-  height: 18px;
+.titlebar-btn {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 2px solid #1a1a1a;
-  cursor: pointer;
+  border: 1px solid #000;
   padding: 0;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
-.dot-white {
-  background: #ffffff;
+#titlebar-minimize {
+  background: #fff;
 }
 
-.dot-pink {
-  background: #e8639a;
+#titlebar-maximize {
+  background: #ff7ebe;
 }
 
-.dot-purple {
-  background: #c98aff;
-}
-
-.dot:hover {
-  filter: brightness(1.1);
-}
-
-.content {
-  flex: 1;
-  background: #1a1a1a;
-  overflow: auto;
+#titlebar-close {
+  background: #ff7ebe;
 }
