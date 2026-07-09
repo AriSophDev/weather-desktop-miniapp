@@ -13,8 +13,7 @@ function getTimeOfDay() {
 }
 
 function mapWeatherCode(code) {
-  if (code === 0) return "sunny";
-  if (code <= 3) return "sunny";
+  if (code <= 1) return "sunny";
   if (code <= 48) return "cloudy";
   if (code <= 67) return "rainy";
   if (code <= 77) return "cloudy";
