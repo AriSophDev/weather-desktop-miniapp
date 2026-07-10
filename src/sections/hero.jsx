@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import Heart from "../assets/heart.svg";
 import "./hero.css";
 

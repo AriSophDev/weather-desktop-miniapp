@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "preact/hooks";
 import "./App.css";
 import { Hero } from "./sections/hero.jsx";
 import Windowbar from "./components/windowbar.jsx";

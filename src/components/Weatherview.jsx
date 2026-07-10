@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "preact/hooks";
 import "./weather.css";
 
 const GEO_API = "https://geocoding-api.open-meteo.com/v1/search";
