@@ -46,4 +46,5 @@ bun run tauri build
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia que se indique en el repositorio.
+Este proyecto está bajo la licencia MIT
+
