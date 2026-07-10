@@ -1,8 +1,49 @@
-# Tauri + React
+# 🌤️ Weather Desktop Miniapp
 
-This template should help get you started developing with Tauri and React in Vite.
+Una mini-aplicación de escritorio para consultar el clima, construida con **Tauri** y **React**.
 
-## Recommended IDE Setup
+## ✨ Características
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
-# weather-desktop-miniapp
+- 🖥️ Aplicación de escritorio ligera gracias a **Tauri** (backend en Rust)
+- ⚛️ Interfaz construida con **React 19**
+- 💅 Estilizado con **styled-components**
+- ⚡ Desarrollo y build rápidos con **Vite**
+
+## 🛠️ Stack tecnológico
+
+| Tecnología | Uso |
+|---|---|
+| React | Interfaz de usuario |
+| Tauri | Empaquetado de escritorio (Rust) |
+| Vite | Bundler / dev server |
+| styled-components | Estilos |
+
+## 🚀 Instalación
+en el release esta el RPM o puedes hacer tu el build 
+
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/AriSophDev/weather-desktop-miniapp.git
+cd weather-desktop-miniapp
+
+# Instalar dependencias
+bun install   # o npm install
+
+# Modo desarrollo
+bun run tauri dev
+
+# Compilar aplicación de escritorio
+bun run tauri build
+```
+
+## 📦 Scripts disponibles
+
+- `dev` – Inicia el servidor de desarrollo Vite
+- `build` – Compila el proyecto para producción
+- `preview` – Previsualiza el build
+- `tauri` – Comandos del CLI de Tauri
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia que se indique en el repositorio.
