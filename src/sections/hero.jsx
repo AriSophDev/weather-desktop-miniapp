@@ -20,8 +20,7 @@ export function Hero({ cityName, onSearch, unit, onUnitChange }) {
       );
       const data = await res.json();
       setResults(data.results || []);
-    } catch (err) {
-      console.error("Error searching city:", err);
+    } catch {
       setResults([]);
     } finally {
       setSearching(false);

@@ -64,26 +64,19 @@
   height: 27px;
   background: #f97db9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(2px);
   border-radius: 1000px;
   color: white;
   font-size: 13px;
   font-weight: 500;
   border: none;
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.2s;
 }
 
 .button-f.active,
 .button-c.active {
   background: #e05a9a;
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-}
-
-.button-f:active,
-.button-c:active {
-  transform: scale(0.95);
 }
 
 /* ===== SEARCH MODAL ===== */

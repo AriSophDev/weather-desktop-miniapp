@@ -51,16 +51,8 @@ function getConditionLabel(condition) {
 function RainDrops() {
   return (
     <div className="rain-container">
-      {Array.from({ length: 30 }).map((_, i) => (
-        <div
-          key={i}
-          className="raindrop"
-          style={{
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 2}s`,
-            animationDuration: `${0.5 + Math.random() * 0.5}s`,
-          }}
-        />
+      {Array.from({ length: 12 }).map((_, i) => (
+        <div key={i} className={`raindrop r${i}`} />
       ))}
     </div>
   );
@@ -111,8 +103,8 @@ export function WeatherView({ coords, onCityName, unit }) {
           setTemperature(Math.round(cw.temperature));
           setWeather(mapWeatherCode(cw.weathercode));
         }
-      } catch (err) {
-        console.error("Error fetching weather:", err);
+      } catch {
+        setTemperature(null);
       } finally {
         setLoading(false);
       }
@@ -127,9 +119,7 @@ export function WeatherView({ coords, onCityName, unit }) {
         if (data.results && data.results.length > 0) {
           onCityName?.(data.results[0].name);
         }
-      } catch (err) {
-        console.error("Error fetching city name:", err);
-      }
+      } catch {}
     }
 
     if (coords) {
