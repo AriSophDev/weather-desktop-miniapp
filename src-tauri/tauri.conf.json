@@ -16,7 +16,8 @@
         "width": 513,
         "height": 390,
         "resizable": false,
-        "decorations": false
+        "decorations": false,
+        "transparent": true
       }
     ],
     "security": {
@@ -25,7 +26,7 @@
   },
   "bundle": {
     "active": true,
-    "targets": "rpm",
+    "targets": ["dmg", "appimage", "rpm"],
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",

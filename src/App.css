@@ -9,5 +9,13 @@
 
 html, body {
   overflow: hidden;
+  border-radius: 12px;
+  background: transparent;
   font-family: "Google Sans Flex", sans-serif;
+}
+
+#root {
+  overflow: hidden;
+  border-radius: 12px;
+  height: 100vh;
 }
